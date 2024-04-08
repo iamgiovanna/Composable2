@@ -24,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 
 class MainActivity : ComponentActivity() {
@@ -33,6 +34,7 @@ class MainActivity : ComponentActivity() {
             MessageTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+
                     Greeting("Android")
                 }
             }
@@ -56,15 +58,15 @@ Column(
 ) {
     Text(
         text = message,
-        fontSize = 100.sp,
+        fontSize = 50.sp,
         lineHeight = 116.sp,
         textAlign = TextAlign.Center
     )
     Text(
         text = from,
-        fontSize = 36.sp,
+        fontSize = 20.sp,
         modifier = Modifier
-            .padding(16.dp)
+            .padding(25.dp)
             .align(alignment = Alignment.End)
     )
 }
@@ -78,14 +80,14 @@ Column(
 fun BirthdayCardPreview() {
     MessageTheme {
         GreetingImage(
-            message = " Happy Birthday Sam!",
-            from = "From Emma...",
-            modifier = Modifier.padding(8.dp))
+            message = "Giovanna Oliveira",
+            from = "3°Desenvolvimento de Sistemas",
+            modifier = Modifier.padding(70.dp))
     }
 }
 @Composable
 fun GreetingImage(message: String,from: String,modifier: Modifier = Modifier){
-    val image = painterResource(R.drawable.androidparty)
+    val image = painterResource(R.drawable.programmer_aesthetics)
    Box(modifier){
        Image(
         painter = image,
